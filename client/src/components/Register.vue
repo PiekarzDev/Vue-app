@@ -2,32 +2,29 @@
 
  <v-layout column>
     <v-flex xs6 offset-xs3>
-      <panel title="Register">
-        <form 
-          name="tab-tracker-form"
-          autocomplete="off">
-          <v-text-field
-            label="Email"
-            v-model="email"
-          ></v-text-field>
-          <br>
-          <v-text-field
-            label="Password"
-            type="password"
-            v-model="password"
-            autocomplete="new-password"
-          ></v-text-field>
-        </form>
+      <div class="white elevation-8">
+        <v-toolbar flat dense class="teal">
+        <v-toolbar-title>Register</v-toolbar-title>
+        </v-toolbar>
+      
+      <div class="pl-4 pr-4 pt-2 pb-2">
         <br>
-        <div class="danger-alert" v-html="error" />
+        <input type="email" name="email" v-model="email" placeholder="Email">
+        <br>
+        <br>
+        <input type="password" name="password" v-model="password" placeholder="Password">
+        <br>
+        <br>
+        <div class="error" v-html="error" />
         <br>
         <v-btn
-          dark
-          class="cyan"
+          round
+          class="teal"
           @click="register">
           Register
         </v-btn>
-      </panel>
+      </div>
+      </div>
     </v-flex>
   </v-layout>
 </template>
@@ -59,7 +56,16 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+v-toolbar .flat{
+  text-align: center;
+}
 .error {
   color: red;
+}
+
+.white{
+  border-radius: 10px;
+  
 }
 </style>
