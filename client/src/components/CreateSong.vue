@@ -39,15 +39,16 @@
        required
       :rules="[required]"></v-text-field>
     </panel>
-    <span class="error" v-if="error">
-      {{error}}
-    </span>
+    
         <v-btn
           round
           class="teal mt-5"
           @click="create">
           Zamieść
         </v-btn>
+        <span class="error" v-if="error">
+      {{error}}
+    </span>
     </v-flex>
  </v-layout>
 </template>
@@ -69,7 +70,7 @@ export default {
         tab: null
       },
       error: null,
-      required: (value) => !!value || 'Required.'
+      required: (value) => !!value || 'Wymagane!'
     }
   },
   methods: {
@@ -99,4 +100,7 @@ export default {
 </script>
 
 <style scoped>
+.error{
+  display: block;
+}
 </style>
