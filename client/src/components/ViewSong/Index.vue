@@ -40,7 +40,6 @@ export default {
     SongMaindata,
     YouTube,
     Lyrics
-   
   }
 }
 </script>
