@@ -1,6 +1,6 @@
 <template>
 <panel title="Song Maindata">
-      <v-layout >
+      <v-layout>
         <v-flex xs6 left>
           <div class="song-title">
             {{song.title}}
@@ -11,6 +11,19 @@
           <div class="song-genere">
             {{song.genere}}
           </div>
+
+          <v-btn
+          round
+          class="teal"
+          @click="navigateTo({
+            name: 'song-edit',
+            params: {
+              songId: song.id
+            }
+          })">
+          Edit
+        </v-btn>
+
         </v-flex>  
 
         <v-flex xs6>
@@ -27,6 +40,11 @@ import Panel from '@/components/Panel'
 export default {
   components: {
     Panel
+  },
+  methods: {
+    navigateTo (route) {
+      this.$router.push(route)
+    }
   },
   props: [
     'song'

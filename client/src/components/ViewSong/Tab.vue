@@ -1,14 +1,7 @@
 <template>
-<panel title="YouTube Video">
-
-    <youtube
-      :video-id="ytId"
-      :player-width="500"
-      :player-hight="700">
-    </youtube>
- 
+<panel title="Tab">
+<textarea readonly  v-model="song.tab"></textarea>
 </panel>
-
 </template>
 
 <script>
@@ -18,11 +11,14 @@ export default {
     Panel
   },
   props: [
-    'ytId'
+    'song'
   ]
 }
 </script>
 
 <style scoped>
-
+textarea{
+  height: 235px;
+  width: 90%;
+}
 </style>

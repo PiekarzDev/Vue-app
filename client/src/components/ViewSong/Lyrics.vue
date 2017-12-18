@@ -17,5 +17,8 @@ export default {
 </script>
 
 <style scoped>
-
+textarea{
+  height: 235px;
+  width: 80%;
+}
 </style>

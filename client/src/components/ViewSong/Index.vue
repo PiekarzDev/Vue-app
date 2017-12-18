@@ -1,23 +1,30 @@
 <template>
 <div>
 <v-layout>
-    <v-flex xs6 ml-2 mt-3>
+        <v-flex xs6 ml-2 mt-3>
           <song-maindata :song="song" />  
-         </v-flex>      
+        </v-flex>   
 
-  <v-flex xs6 ml-2 mt-3>
-    <lyrics :song="song"/>
-  </v-flex>
+        <v-flex xs6 ml-2 mt-3>
+          <lyrics :song="song"/>
+        </v-flex>
 
-<v-flex xs6 ml-2 mt-3 >
-    <you-tube :ytId="song.ytId" />
-  </v-flex>
+  </v-layout>
+
+  <v-layout>
+    <v-flex class="yt" xs6 ml-2 mt-3 >
+      <you-tube :ytId="song.ytId" />
+    </v-flex>
+    <v-flex xs6 ml-2 mt-3>
+      <tab :song="song" />
+    </v-flex>
 
   </v-layout>
   </div>
 </template>
 
 <script>
+import Tab from './Tab'
 import YouTube from './YouTube'
 import Lyrics from './Lyrics'
 import SongMaindata from './SongMaindata'
@@ -39,7 +46,8 @@ export default {
     Panel,
     SongMaindata,
     YouTube,
-    Lyrics
+    Lyrics,
+    Tab
   }
 }
 </script>
@@ -57,9 +65,12 @@ export default {
 }
 
 textarea{
-  width: 75%;
+  width: 80%;
  
 }
 
+.yt{
+  overflow: hidden;
+}
 
 </style>
