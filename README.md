@@ -1,6 +1,7 @@
 # Vue-app
 Vue App saveing tracks 
-Just a lering lesson and paly ground to absorb skills from Cody Seibert - thanks ! :)
+<br>
+It just a lering lesson and paly ground to absorb skills from Cody Seibert - thanks ! :)
 
 
 # Setup/Run App
