@@ -2,7 +2,7 @@
     <v-toolbar fixed class="teal">
         <v-toolbar-title class="mr-4">
             <span class="home" @click="navigateTo({name: 'HelloWorld'})" >
-                TabTracker</span> </v-toolbar-title>
+                SongStore</span> </v-toolbar-title>
         <v-toolbar-items>
             <v-btn flat @click="navigateTo({name: 'songs'})">
                 Browse

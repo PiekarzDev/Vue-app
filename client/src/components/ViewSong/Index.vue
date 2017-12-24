@@ -29,7 +29,6 @@ import YouTube from './YouTube'
 import Lyrics from './Lyrics'
 import SongMaindata from './SongMaindata'
 import SongsService from '@/services/SongsService'
-import Panel from '@/components/Panel'
 
 export default {
   data () {
@@ -43,7 +42,6 @@ export default {
     this.song = (await SongsService.show(songId)).data
   },
   components: {
-    Panel,
     SongMaindata,
     YouTube,
     Lyrics,
