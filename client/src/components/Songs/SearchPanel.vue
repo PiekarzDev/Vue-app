@@ -2,14 +2,15 @@
 <panel title="Search" class="mt-3">
     
     <v-text-field
-    label=" NAME/ARTIST/ALBUM OR GENRE "
-    v-model="search"
+      label="Search by song title, artist, album, or genre"
+      v-model="search"
     ></v-text-field>
     
 </panel>
 </template>
 
 <script>
+import _ from 'lodash'
 export default {
   data () {
     return {
@@ -17,7 +18,7 @@ export default {
     }
   },
   watch: {
-    search (value) {
+    search: _.debounce(async function (value) {
       const route = {
         name: 'songs'
       }
@@ -27,8 +28,8 @@ export default {
         }
       }
       this.$router.push(route)
-    },
-    'this.$route.search': {
+    }, 700),
+    '$route.query.search': {
       immediate: true,
       handler (value) {
         this.search = value

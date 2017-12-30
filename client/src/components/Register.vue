@@ -47,6 +47,9 @@ export default {
         })
         this.$store.dispatch('setToken', response.data.token)
         this.$store.dispatch('setUser', response.data.token)
+        this.$router.push({
+          name: 'songs'
+        })
       } catch (error) {
         this.error = error.response.data.error
       }
@@ -60,9 +63,6 @@ export default {
 
 v-toolbar .flat{
   text-align: center;
-}
-.error {
-  color: red;
 }
 
 .white{
