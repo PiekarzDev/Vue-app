@@ -1,7 +1,6 @@
 # Vue-app
-Vue App saveing tracks 
+Vue App storeing tracks
 <br>
-Tips and absorb skills from Cody Seibert - thanks ! :)
 
 # Setup/Run App
 
