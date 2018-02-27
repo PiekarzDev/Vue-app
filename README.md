@@ -1,5 +1,5 @@
 # Vue-app
-Vue App storeing tracks
+Vue App storing tracks
 <br>
 
 # Setup/Run App
